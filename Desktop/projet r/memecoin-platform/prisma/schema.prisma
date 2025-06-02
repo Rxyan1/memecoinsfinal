@@ -1,0 +1,35 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid()) // identifiant unique
+  email     String   @unique              // email unique
+  username  String   @unique
+  password  String
+  zth       Int      @default(100)        // Définir la valeur par défaut à 100
+  pspCoins  Int      @default(0)
+  role      String   @default("USER")     // Nouveau champ pour les rôles d'utilisateurs
+  tokens    Token[]                       // relation vers les tokens créés
+}
+
+model Token {
+  id         String   @id @default(cuid())
+  name       String
+  symbol     String   @unique
+  supply     Int      @default(0)
+  creator    User     @relation(fields: [creatorId], references: [id])
+  creatorId  String
+}
+
+model MarketStats {
+  id        String   @id @default(cuid())
+  pspSupply Int      @default(0)
+  zthReserve Int     @default(0)
+  updatedAt DateTime @updatedAt
+}
