@@ -36,7 +36,7 @@ La plateforme utilise une base de données PostgreSQL avec les modèles suivants
 
 1. Cloner le dépôt :
 ```bash
-git clone <url-du-dépôt>
+git clone (https://github.com/Rxyan1/memecoinsfinal/tree/main)
 cd memecoin-platform
 ```
 
