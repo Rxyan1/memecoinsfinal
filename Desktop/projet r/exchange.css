@@ -1,0 +1,117 @@
+.back-link {
+    display: inline-block;
+    margin-top: 10px;
+    color: #3498db;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.exchange-form-container {
+    margin-top: 20px;
+}
+
+.current-rates {
+    background-color: #f8f9fa;
+    padding: 10px 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    border-left: 4px solid #3498db;
+}
+
+.exchange-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    margin-bottom: 30px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.form-group select, .form-group input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.exchange-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #7f8c8d;
+}
+
+button.exchange-btn {
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button.exchange-btn:hover {
+    background-color: #2980b9;
+}
+
+.exchange-history {
+    margin-top: 30px;
+}
+
+.exchange-history h3 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.exchange-history table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.exchange-history th, .exchange-history td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.exchange-history th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+@media (min-width: 768px) {
+    .exchange-form {
+        flex-direction: row;
+        align-items: flex-end;
+    }
+    
+    .form-group {
+        flex: 1;
+    }
+}
+
+@media (max-width: 767px) {
+    .exchange-arrow {
+        transform: rotate(90deg);
+        margin: 10px 0;
+    }
+}

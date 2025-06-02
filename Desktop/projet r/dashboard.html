@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau de bord - Ninkasi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header class="user-header">
+            <div class="user-info">
+                <h2>Utilisateur: <span id="username">admin1@ninkasi.fr</span></h2>
+                <p>Email: <span id="email">admin1@ninkasi.fr</span></p>
+            </div>
+        </header>
+        
+        <section class="balance-section">
+            <div class="balance-card">
+                <h3>Votre solde</h3>
+                <p class="balance-amount"><span id="zth-balance">50</span> ZTH</p>
+            </div>
+        </section>
+        
+        <section class="currencies-section">
+            <div class="currency-card primary">
+                <h3>Votre monnaie principale</h3>
+                <p class="currency-amount"><span id="primary-currency-amount">31</span> PSP Coins</p>
+            </div>
+            
+            <div class="currency-card exchange">
+                <h3>Votre monnaie d'échange</h3>
+            </div>
+        </section>
+        
+        <section class="market-stats">
+            <h2>Statistiques du marché</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <p class="stat-value"><span id="total-zth">256</span> ZTH</p>
+                    <p class="stat-label">ZTH total</p>
+                </div>
+                <div class="stat-item">
+                    <p class="stat-value"><span id="total-psp-coins">38</span> PSP Coins</p>
+                    <p class="stat-label">PSP Coins total</p>
+                </div>
+                <div class="stat-item">
+                    <p class="stat-value"><span id="psp-supply">28</span> PSP</p>
+                    <p class="stat-label">Supply en circulation</p>
+                </div>
+                <div class="stat-item">
+                    <p class="stat-value"><span id="current-price">1.2800</span> ZTH</p>
+                    <p class="stat-label">Prix actuel/PSP Coin</p>
+                </div>
+            </div>
+        </section>
+        
+        <div class="action-buttons">
+            <a href="logout.php" class="btn logout-btn">Se déconnecter</a>
+            <a href="exchange.html" class="btn exchange-btn">Échange de PSP Coins</a>
+        </div>
+    </div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>
